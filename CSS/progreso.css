@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.progreso-page {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #e6f2ff, #f7f9fc);
+  color: #333;
+  min-height: 100vh;
+}
+
+
+.site-header {
+  background-color: #0066cc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+  font-size: 1.8rem;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #004a99;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color .3s ease;
+}
+
+.header-right a:hover {
+  background-color: #003b7a;
+}
+
+
+.main-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.actividad-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+.actividad-card:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+
+.editable-field {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.editable-field label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #0066cc;
+}
+
+.editable-field input[type="text"],
+.editable-field input[type="date"],
+.editable-field textarea,
+.editable-field select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.editable-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 0;
+  right: 0.6rem;
+  font-size: 1rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.acciones button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.acciones button[name="actualizar"] {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.acciones .eliminar-btn {
+  background-color: #c62828;
+  color: #fff;
+}
+
+.acciones .eliminar-btn:hover {
+  background-color: #a31212;
+}
+
+
+.mensaje-login {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 3rem;
+}
+
+
+.animated {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 700px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .actividad-card {
+    padding: 1.2rem;
+  }
+}

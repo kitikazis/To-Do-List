@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.actividades-page {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #e6f2ff, #f7f9fc);
+  color: #333;
+  min-height: 100vh;
+}
+
+
+.site-header {
+  background-color: #0066cc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+  font-size: 1.8rem;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #004a99;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.form-section, .listado-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.actividad-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actividad-form input,
+.actividad-form textarea,
+.actividad-form button {
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.actividad-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.actividad-form button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.actividades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actividad-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.actividad-resumen {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actividad-foto {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.actividad-detalle {
+  margin-top: 1rem;
+  display: none;
+}
+
+.actividad-detalle.visible {
+  display: block;
+}
+
+.mensaje-login {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+
+.animated {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animated.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

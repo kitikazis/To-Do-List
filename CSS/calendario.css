@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.calendario-page {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #eef4ff, #f9fbfc);
+  color: #333;
+  min-height: 100vh;
+}
+
+
+.site-header {
+  background-color: #0066cc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+  font-size: 1.8rem;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #004a99;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.calendario-controles {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.calendario-controles form {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.calendario-controles select,
+.calendario-controles input,
+.calendario-controles button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.dia-celda {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dia-celda:hover {
+  transform: scale(1.02);
+}
+
+.dia-header {
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: #0066cc;
+}
+
+.actividad-mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.titulo {
+  font-size: 0.95rem;
+}
+
+.estado {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+
+.detalle-expandido {
+  margin-top: 0.8rem;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.dia-celda.expanded .detalle-expandido {
+  display: block;
+}
+
+.titulo-grande {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.estado-grande {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+}
+
+.foto-actividad {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.resumen-actividades {
+  text-align: center;
+  padding: 2rem;
+}
+
+.resumen-actividades button {
+  padding: 0.6rem 1.2rem;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color .3s ease;
+}
+
+.resumen-actividades button:hover {
+  background-color: #004a99;
+}
+
+
+.animated {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animated.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

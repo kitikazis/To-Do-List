@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.index-page {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #e6f2ff, #f7f9fc);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Cabecera */
+.site-header {
+  background-color: #0066cc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color .3s ease;
+}
+
+.header-right a:hover {
+  background-color: #004a99;
+}
+
+.logout-form button {
+  background-color: #004a99;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.logout-form button:hover {
+  background-color: #002d66;
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Banner usuario */
+.user-banner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.user-banner img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0066cc;
+}
+
+.user-banner h2 {
+  color: #0066cc;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+
+/* Secciones animadas */
+.animated-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-section h2 {
+  font-size: 1.4rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.animated-section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.animated-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Botón agregar */
+.btn-agregar {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background-color: #0066cc;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color .3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #004a99;
+}
+
+/* Estado resumen */
+.estado-resumen ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.estado-resumen li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #333;
+}
+
+/* Circulitos por estado */
+.estado-circulo {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.estado-circulo.realizado     { background-color: #4CAF50; }
+.estado-circulo.en-proceso    { background-color: #FFEB3B; }
+.estado-circulo.no-realizado  { background-color: #F44336; }
+.estado-circulo.pendiente     { background-color: #ccc; }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-right {
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .animated-section {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1754664533,
+        "user": "XDXD",
+        "mail": "XD@gmai.com",
+        "password": "$2y$10$PPvFoCSLl7VMqc8HQ5BXCeUkoxazBvBmO4MNJ81Y1CBdz9mUDx40O",
+        "photo": "IMG\/1754664533.jpg"
+    },
+    {
+        "id": 1754664551,
+        "user": "XD",
+        "mail": "xd@gmail.com",
+        "password": "$2y$10$RFLLHjvA393xCfhSKrgCzOorIo9nPy1jHrTQi79zCuIl7mGmbiUCO",
+        "photo": "IMG\/1754664551.jpg"
+    }
+]
