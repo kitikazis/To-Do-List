@@ -1,0 +1,16 @@
+{
+    "name": "to-do-list",
+    "version": "1.0.0",
+    "scripts": {
+        "test:js": "jest",
+        "test:php": "vendor/bin/phpunit",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage"
+    },
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "jest-environment-jsdom": "^30.0.5",
+        "jsdom": "^22.0.0",
+        "puppeteer": "^21.0.0"
+    }
+}

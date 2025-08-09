@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ActivityManagerTest::debe_crear_nueva_actividad_con_datos_validos":8,"ActivityManagerTest::debe_fallar_al_crear_actividad_sin_titulo":8},"times":{"ActivityManagerTest::testExample":0.019,"ActivityManagerTest::debe_crear_nueva_actividad_con_datos_validos":0.007,"ActivityManagerTest::debe_fallar_al_crear_actividad_sin_titulo":0.001}}

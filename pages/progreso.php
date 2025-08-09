@@ -9,7 +9,6 @@ if (!file_exists(ACTIVIDADES_FILE)) {
 }
 $actividades = json_decode(file_get_contents(ACTIVIDADES_FILE), true) ?? [];
 
-// Eliminar actividad
 if (isset($_POST['eliminar'])) {
     $idEliminar = $_POST['eliminar'];
     $actividades = array_filter($actividades, fn($a) => $a['id'] !== $idEliminar);
@@ -18,7 +17,6 @@ if (isset($_POST['eliminar'])) {
     exit;
 }
 
-// Actualizar campos
 if (isset($_POST['actualizar']) && $loggedIn) {
     foreach ($actividades as &$a) {
         if ($a['id'] === $_POST['actividad_id'] && $a['user_id'] === $userId) {
