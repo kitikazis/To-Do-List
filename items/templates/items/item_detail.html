@@ -1,0 +1,12 @@
+{% extends 'items/base.html' %}
+
+{% block title %}Detalle: {{ object.name }}{% endblock %}
+
+{% block content %}
+	<h2>{{ object.name }}</h2>
+	<p>{{ object.description|linebreaks }}</p>
+	<p>
+		<a href="/">Volver</a>
+		<a href="/{{ object.id }}/edit/">Editar</a>
+	</p>
+{% endblock %}
